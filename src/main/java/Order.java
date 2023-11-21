@@ -5,4 +5,7 @@ public record Order(
         List<Product> products,
         OrderStatus status
 ) {
+    public Order(String string, List<Product> products) {
+        this(string, products, OrderStatus.OPEN);
+    }
 }
